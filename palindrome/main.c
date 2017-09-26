@@ -23,4 +23,5 @@ int main(int argc, char* argv[]) {
     printf("Is the string <%s> a palindrome? %s\n", line, palindrome(line));
   }
   free(line);
+  
 }
