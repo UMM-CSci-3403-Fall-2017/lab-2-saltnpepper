@@ -3,16 +3,16 @@
 #include "palindrome.h"
 
 void is_palindrome(char* str) {
-  char *result;
+  char* result;
   result = palindrome(str);
   ASSERT_STREQ(result, "Yes");
   free(result);
 }
 
 void not_palindrome(char* str) {
-  char *result;
+  char* result;
   result = palindrome(str);
-  ASSERT_STREQ(palindrome(str), "No");
+  ASSERT_STREQ(result, "No");
   free(result);
 }
 

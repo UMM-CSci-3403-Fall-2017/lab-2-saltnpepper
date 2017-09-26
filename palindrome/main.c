@@ -10,7 +10,9 @@ int main(int argc, char* argv[]) {
   
   size = 100;
   line = (char*) calloc (size + 1, sizeof(char));
-
+  
+  char* result;
+ 
   // fgets reads a line from stdin (usually the keyboard)
   // and returns it in the buffer passed as the first argument
   // (line here). If there's no more input to read from, it
@@ -20,7 +22,9 @@ int main(int argc, char* argv[]) {
     // Without it, nothing will ever be a palindrome, unless it happens
     // to somehow start with a '\n'.
     line[strcspn(line, "\n")] = '\0';
-    printf("Is the string <%s> a palindrome? %s\n", line, palindrome(line));
+    result = palindrome(line);
+    printf("Is the string <%s> a palindrome? %s\n", line, result);
+    free(result);
   }
   free(line);
   
