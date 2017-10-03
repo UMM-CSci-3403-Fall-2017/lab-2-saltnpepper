@@ -15,6 +15,7 @@ int main(int argc, char* argv[]) {
   while (getline(&line, &size, stdin) > 0) {
     result = disemvowel(line);  
     printf("%s\n", result);
+    //freeing the result from disemvowel.c everytime if goes through the while loop
     free(result);
   }
 
